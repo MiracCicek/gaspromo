@@ -24,3 +24,9 @@ db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                      user="root",         # your username
                      passwd="352458",  # your password
                      db="gasprom")
+cur = db.cursor()
+cur.execute(sqlQuery)
+db.commit()
+
+cur.close()
+db.close()
